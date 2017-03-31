@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>3CSB-BAQUIRAN_JOEHANNAHVIE-MP3-MVC-GASOLINESTORE</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>unleaded</param-name>
+    <param-value>44.00</param-value>
+  </context-param>
+  <context-param>
+    <param-name>diesel</param-name>
+    <param-value>38.00</param-value>
+  </context-param>
+  <context-param>
+    <param-name>premium</param-name>
+    <param-value>50.00</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>GasolineStoreServlet</servlet-name>
+    <servlet-class>gasoline.store.contoller.GasolineStoreServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListRecordServlet</servlet-name>
+    <servlet-class>gasoline.store.contoller.ListRecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GasolineStoreServlet</servlet-name>
+    <url-pattern>/gasolinestore.html</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListRecordServlet</servlet-name>
+    <url-pattern>/listrecord.html</url-pattern>
+  </servlet-mapping>
+</web-app>
